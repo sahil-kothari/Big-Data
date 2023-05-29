@@ -36,9 +36,9 @@ public class LogFile {
                 public void map(LongWritable key, Text value, Context con) throws IOException, InterruptedException{ 
                         String text = value.toString(); 
                         String[] words=text.split(","); 
-                        Text outputKey = new Text(words[2].toUpperCase().trim()); 
-                        int datein = Integer.parseInt(words[3]); 
-                        int dateout = Integer.parseInt(words[4]); 
+                        Text outputKey = new Text(words[1].toUpperCase().trim()); 
+                        int datein = Integer.parseInt(words[2]); 
+                        int dateout = Integer.parseInt(words[3]); 
                         long total = dateout - datein; 
                         int total_in = (int) total; 
                         IntWritable outputValue = new IntWritable(total_in); 
