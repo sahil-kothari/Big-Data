@@ -1,3 +1,6 @@
+// Isme when you copy the dataset from linux to hadoop...make sure that u delete the column names...
+// if column names are not deleted then you will face an error "NumberFormatException"
+
 package pk1;
 
 import java.io.IOException;
